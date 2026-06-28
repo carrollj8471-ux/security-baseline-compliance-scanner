@@ -1,0 +1,17 @@
+check_id,control,status,risk_if_failed,evidence,recommendation
+WIN-001,Windows Firewall enabled on all profiles,PASS,High,All firewall profiles are enabled,No action required.
+WIN-002,Microsoft Defender service running,PASS,High,Running,No action required.
+WIN-003,Wazuh agent service running,PASS,High,Running,No action required.
+WIN-004,Sysmon service running,PASS,Medium,Running,No action required.
+WIN-005,Remote Desktop disabled,WARN,Medium,fDenyTSConnections = 0,Disable RDP if not required or restrict access to trusted networks.
+WIN-006,Local administrators group reviewed,INFO,Medium,"Alias name     administrators
+Comment        Administrators have complete and unrestricted access to the computer/domain
+
+Members
+
+-------------------------------------------------------------------------------
+Administrator
+User
+The command completed successfully.",Review members and remove unnecessary local admin access.
+WIN-007,Minimum password length is at least 8,WARN,Medium,Minimum password length: 0,Set minimum password length to at least 8 or higher.
+WIN-008,Account lockout threshold configured,PASS,Medium,Lockout threshold: 10,No action required.
